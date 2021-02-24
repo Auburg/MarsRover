@@ -1,0 +1,6 @@
+**/obj
+**/bin
+**/packages
+/MarsRover.csproj.user
+/.vs/MarsRover/DesignTimeBuild/.dtbcache.v2
+/Modules/MarsRover.Modules.ModuleName/*.user

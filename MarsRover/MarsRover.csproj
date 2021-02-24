@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>MarsRover</AssemblyName>
+    <StartupObject>MarsRover.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.4.3" />
+    <PackageReference Include="Prism.DryIoc" Version="8.0.0.1909" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MarsRover.Core\MarsRover.Core.csproj" />
+    <ProjectReference Include="..\Services\MarsRover.Services\MarsRover.Services.csproj" />
+  </ItemGroup>
+</Project>

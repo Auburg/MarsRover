@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>MarsRover.Module</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Resources\Curiosity.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Curiosity.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MarsRover.Core\MarsRover.Core.csproj" />
+    <ProjectReference Include="..\..\Services\MarsRover.Services\MarsRover.Services.csproj" />   
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetDir)$(TargetName)*$(TargetExt)&quot; &quot;$(SolutionDir)$(SolutionName)\$(OutDir)&quot; /Y /S" />
+  </Target>
+</Project>

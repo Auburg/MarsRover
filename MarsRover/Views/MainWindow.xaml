@@ -1,0 +1,21 @@
+﻿<mah:MetroWindow x:Class="MarsRover.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        FontSize="15"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:core="clr-namespace:MarsRover.Core;assembly=MarsRover.Core"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        Width="1920" Height="1200"
+        Title="{Binding Title}" WindowStartupLocation="CenterScreen"  >
+    <DockPanel >
+        <Border DockPanel.Dock="Left" Margin="2" BorderBrush="Black" BorderThickness="0.5px">
+            <StackPanel Orientation="Vertical">
+                <ContentControl VerticalAlignment="Top" prism:RegionManager.RegionName="{x:Static core:RegionNames.RoverContentRegion}" />
+            </StackPanel>            
+        </Border>
+        <Border Margin="2" BorderBrush="Black" BorderThickness="0.5px">
+            <ContentControl prism:RegionManager.RegionName="{x:Static core:RegionNames.PhotosContentRegion}" />
+        </Border>
+    </DockPanel>
+</mah:MetroWindow>
